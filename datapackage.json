@@ -4,7 +4,7 @@
   "resources": [
     {
       "name": "spending-resource",
-      "path": "spending.csv",
+      "path": "data/pharmaceutical_total_spending.csv",
       "format": "csv",
       "mediatype": "text/csv",
       "schema": {
@@ -48,6 +48,11 @@
             "name": "Flag Codes",
             "type": "string",
             "description": ""
+          },
+          {
+            "name": "TotalValue",
+            "type": "number",
+            "description": "total spending in million USD"
           }
         ],
         "primaryKey": "TIME"
@@ -61,7 +66,7 @@
       "state": {
         "graphType": "lines",
         "group": "TIME",
-        "series": [ "Value" ]
+        "series": [ "TotalValue", "Value" ]
       }
     }
   ]
