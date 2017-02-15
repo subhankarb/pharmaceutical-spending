@@ -1,0 +1,68 @@
+{
+  "title": "Spending on Pharmaceuticals",
+  "name": "spending_on_pharmaceuticals",
+  "resources": [
+    {
+      "name": "spending-resource",
+      "path": "spending.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "LOCATION",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "INDICATOR",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "SUBJECT",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "MEASURE",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "FREQUENCY",
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "TIME",
+            "type": "number",
+            "description": ""
+          },
+          {
+            "name": "Value",
+            "type": "number",
+            "description": ""
+          },
+          {
+            "name": "Flag Codes",
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "primaryKey": "TIME"
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "Graph",
+      "type": "Graph",
+      "state": {
+        "graphType": "lines",
+        "group": "TIME",
+        "series": [ "Value" ]
+      }
+    }
+  ]
+}
